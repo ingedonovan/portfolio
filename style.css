@@ -1,7 +1,24 @@
+h1{
+    font: 200%/1.5 arial;
+}
 body {
     /* Set line height to 1.5 times the font size
        and use the OS’s UI font as the website font
      */
-    font: 100%/1.5 arial;
-    max-width: 150px;
+    font: 100%/1.5 courier;
+    max-width: 100ch;
+    color: rgb(95, 95, 141);
+
+    margin-inline: 30% 30%;
+    writing-mode: horizontal-tb;
+    padding: 10%;
    }
+
+   li {
+    display: inline;
+  }
+
+  a:hover {
+    background-color: rgb(190, 126, 172);
+    color: rgb(6, 6, 113);
+  }
