@@ -1,5 +1,11 @@
 h1{
     font: 200%/1.5 arial;
+    text-align: center;
+}
+h2{
+  font: 150%/1.5 arial;
+  font-style: light;
+  text-align: center;
 }
 body {
     /* Set line height to 1.5 times the font size
