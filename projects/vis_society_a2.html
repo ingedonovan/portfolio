@@ -4,7 +4,7 @@
 	<title>Vis &amp; Society Assignment 2</title>
 	<link rel="stylesheet" href="Vis%20&amp;%20Society%20Assignment%202_files/report.css">
 </head>
-
+<link href="style.css" rel="stylesheet" />
 <body>
 	<header>
 		<h1>
@@ -20,93 +20,280 @@
 		<section>
 			<h2>Subtheme: [Condo Conversions]</h2>
 
-			<h3>Overall Analysis Questions</h3>
-			<ol>
-				<li>How quickly is an apartment converted into a condo after it is purchased?</li>
-				<li>Do condo conversions happen more rapidly in neighbourhoods with fast-rising real estate values?</li>
-				<li>What type of properties are most likely to become condos - historic, or recently built?</li>
-				<li>...</li>
-			</ol>
+			<h3>Overall Analysis Questions:</h3>
+			<h3> Do condo conversions happen more rapidly in neighbourhoods with fast-rising real estate values? </h3>
+				<p>I'm motivated to learn more about this as I was recently reading about gentrification in Chicago, and I'm curious about how certain trends turn into positive
+					feedback loops. </p>
+				<h3>
+				What type of properties are most likely to become condos - historic, or recently built? </h3>
+				<p>My background is in architecture and building technology, so therefore I'm interested in finding patterns in types of constructive system or certain typologies of building. 
+				</p>
+				<h3>How does the condo conversion affect the property - does it become more valuable? Is this reflected 
+					only in the financial value assessment of the property, or are there other markers? </h3>
+				<p>I'm curious about whether the conversion of a property
+					into a set of condos is primarily a symbolic/bureaucratic move, or whether there are more tangible changes as well. </p>	
+			
 		</section>
 
 		<section>
 			<h2>Discoveries &amp; Insights</h2>
 
 			<figure>
-				<img src="images\Boston Number of Units Histogram.png" alt="">
+				<img src="images\Boston and Cambridge Condo Conversion Dataset size.png" alt=""
+					width="100%" >
 				<figcaption>
-				Histogram showing distribution of conversions by number of units. 
+				Figure 1 - Bar chart showing total dataset size for Cambridge and Boston
+				</figcaption>
+			</figure>
+
+			<p> I decided to look at both Boston and Cambridge to get an understanding of the similarities and differences of the two datasets. 
+				My first investigation was to compare the size of the two datasets - I found that the Cambridge dataset was considerably smaller than the Boston dataset (Figure 1). 
+				This makes sense, since Cambridge is a smaller city. 
+			</p>
+
+			<figure>
+				<img src="images\Boston Missing Data Analysis.png" alt=""
+					width="100%" >
+				<figcaption>
+				Figure 2 - Bar chart illustrating null and zero data for the Boston condo conversion dataset. 
 				</figcaption>
 			</figure>
 
 			<figure>
-				<img src="Vis%20&amp;%20Society%20Assignment%202_files/IMAGE_FILENAME.htm" alt="">
+				<img src="images\Cambridge_Data Completeness.png" alt=""
+					width="100%" >
 				<figcaption>
-				ENTER IMAGE CAPTION HERE.
+				Figure 3 - Bar chart illustrating null and zero data for the Cambridge condo conversion dataset. 
+				</figcaption>
+			</figure>
+			
+			<p> Next, I was interested in understanding the completeness of each dataset, as a first glance at the csv file showed many zero and null values. Before arbitrarily
+				removing these from my visualizatons, I wanted to understand whether a null or zero value had meaning in the context of the data. For example, a null or zero value 
+				for a "parking" field could mean that there is no parking, or that there is no data.  
+			</p>
+
+			<p> The completeness of the data ranged from 10% to 100% - again, with the caveat that a 10% value could include zero fields that are actually meaningful. To fully decipher the meaning
+				of a null or zero value, one would need to look at every column in the dataset - visualization can help with this. This is why I 
+				separated this visualization into two separate columns, one indicating null values, and one indicating zero values (Figure 2-3). I found that zero values sometimes stood in for 
+				null values, making the cleaning of this data more complicated - for example, there are many zero values for "land value post" - this seems unrealistic. I also found that there was significant data incompleteness, especially for important data like 
+				the sale price of buildings or condos after conversion.   
+			</p>
+
+			<figure>
+				<img src="images\Boston Year Histogram.png" alt=""
+				width= "25%">
+				<figcaption>
+				Figure 4 - Histogram showing condo conversions in Boston by year (2016-2024)
 				</figcaption>
 			</figure>
 
 			<figure>
-				<img src="Vis%20&amp;%20Society%20Assignment%202_files/IMAGE_FILENAME.htm" alt="">
+				<img src="images\Cambridge YOA Histogram.png" alt=""
+				width= "25%">
 				<figcaption>
-				ENTER IMAGE CAPTION HERE.
+				Figure 5 - Histogram showing condo conversions in Cambridge by year (2015-2023)
+				</figcaption>
+			</figure>
+			
+			<p>Next, I was interested in the date range of the data, and understanding whether condo conversions were increasing or decreasing. 
+				I noticed that in Boston, condo conversions peaked in 2023, while in Cambridge, conversions have been increasing since 2016 (Fig 4 and 5). Both Boston and Cambridge
+				have a gap in data from 2017, and a seemingly disproportional number of conversions in 2018, so it seems that the 2017 data may have been mislabelled as 2018 data. I suspect
+				that it is not possible to deduce which data is mislabelled, and which isn't.  
+			</p>
+
+			<figure>
+				<img src="images\Boston Type Bubble Diagram.png" alt=""
+				width= "100%">>
+				<figcaption>
+				Figure 6 - Bubble diagram showing distribution of building types in Boston prior to condo conversion. 
 				</figcaption>
 			</figure>
 
 			<figure>
-				<img src="Vis%20&amp;%20Society%20Assignment%202_files/IMAGE_FILENAME.htm" alt="">
+				<img src="images\Cambridge Type Bubble Diagram.png" alt=""
+				width= "100%">>
 				<figcaption>
-				ENTER IMAGE CAPTION HERE.
+				Fig 7 - Bubble diagram showing distribution of building types in Cambridge prior to condo conversion.  
+				</figcaption>
+			</figure>
+
+			<p> I saw an opportunity to address my third question, which was about what kind of buildings are most likely to be converted into condos. 
+				In both Cambridge and Boston, condo conversions primarily targeted single, two-family and three-family apartments (Fig 6 and 7).
+				In Boston, the largest category is "residential condo." 
+				It is unclear to me what a "residential condo" is - perhaps this is a misclassification?
+			</p>
+
+			<figure>
+				<img src="images\Boston Condo Conversions by Original Building Age.png" alt=""
+				width= "100%">>
+				<figcaption>
+				Fig 8 - Boston: Year of construction for original building before conversion.  
+				</figcaption>
+			</figure>
+
+			<p> Next, I addressed my third question more directly - were mostly older buildings targeted, or were newer buildings desirable? I created a plot of 
+				the count of buildings for each construction year for Boston, as this data is not available for Cambridge (Fig 8). Here, I encountered a new issue - there were a seemingly disproportional number of buildings
+				dated to 1880, 1890, 1900, 1910 - likely because the construction date wasn't known, and the entry was estimated or rounded. I realized that a histogram would 
+				be a better visualization, so I made this as well (Fig 9). The histogram shows a clear trend toward the conversion of buildings around 100 years old - since these are 
+				mostly single family units, is it possible that they are primarily in areas with higher pressure on the housing market?
+				There was also an increase of condo conversions around the turn of the century - is it possible that buildings are being built with the intent for rapid conversion into condos? 
+			</p>
+
+			<figure>
+				<img src="images\Boston Condo Conversions by Original Building Age_binned.png" alt=""
+				width= "100%">>
+				<figcaption>
+				Fig 9 - Boston: Year of construction for original building before conversion (binned).  
 				</figcaption>
 			</figure>
 
 			<figure>
-				<img src="Vis%20&amp;%20Society%20Assignment%202_files/IMAGE_FILENAME.htm" alt="">
+				<img src="images\Boston Condo Conversions by Original Building Age and Land Use Prior to Conversion.png" alt=""
+				width= "100%">>
 				<figcaption>
-				ENTER IMAGE CAPTION HERE.
+				Fig 10 - Boston: Condo conversions by original building age and land use prior to conversion.   
+				</figcaption>
+			</figure>
+
+			<p> When I plotted land use over building age, I did not immediately notice any new trends (Fig 10). However, this visualization clearly showed that the upticks from 
+				Figure 8 were due to the conversion of single family homes with less than 4 units. 
+			</p>
+
+			<figure>
+				<img src="images\Boston Building Value.png" alt=""
+				width= "100%">>
+				<figcaption>
+				Figure 11 - Histogram showing distribution of condo conversions in Boston by building value prior to conversion, not including buildings valued higher than 8 million USD.  
 				</figcaption>
 			</figure>
 
 			<figure>
-				<img src="Vis%20&amp;%20Society%20Assignment%202_files/IMAGE_FILENAME.htm" alt="">
+				<img src="images\Cambridge Building Value.png" alt=""
+				width= "100%">>
 				<figcaption>
-				ENTER IMAGE CAPTION HERE.
+					Figure 12 - Histogram showing distribution of condo conversions in Cambridge by building value prior to conversion, not including buildings valued higher than 7.2 million USD. 
+				</figcaption>
+			</figure>
+
+			<p>
+				Next, to gain insight on my first question, I address the value of the buildings being converted. 
+				In both Cambridge and Boston, houses valued at less than 2 million USD were most likely to be converted into condos (Fig 11 and 12). However, there were notable outliers - for example Park 1st
+				St. in Cambridge, which was valued at over $100 million USD prior to conversion, and 100 Huntington Ave. in Boston, valued at over $300 million USD. 
+				These are not shown on the histogram as they are outliers. For these, and all following visualization data on building or land value, I kept zero values, as it is possible
+				for buildings or land to have a negative value - however it is likely that some of these zero values are either erroneous, or signfiy a null value. 
+			</p>
+
+			<figure>
+				<img src="images\Boston -  Average Land Value Prior to Condo Conversion.png" alt=""
+				width= "100%">>
+				<figcaption>
+				Figure 13 - Boston: average building value prior to conversion. 
 				</figcaption>
 			</figure>
 
 			<figure>
-				<img src="Vis%20&amp;%20Society%20Assignment%202_files/IMAGE_FILENAME.htm" alt="">
+				<img src="images\Boston -  Density of Condo Conversions by Zip Code.png" alt=""
+				width= "100%">>
 				<figcaption>
-				ENTER IMAGE CAPTION HERE.
+				Figure 14 - Boston: number of conversions per ZIP code parcel. 
+				</figcaption>
+			</figure>
+
+			<p>
+				I continued my exploration of the first question. Intuitively, I thought that there were probably specific areas that were more amenable, or more desirable, for condo conversions. Using ZIP code and 
+				building value prior to condo conversion data, I mapped the dataset (Figure 13 and 14). Interestingly, the most "lucrative" areas around downtown Boston with the highest average building prices prior to conversion
+				have less overall projects, and quickly gentrifying neighbourhoods such as Roxbury and East Boston have a higher count of total conversions. 
+				Naturally, I was interested in the change in value of the building post condo
+				conversion, however the data was extremely spotty for this field, including over 1600 zero values, which made it difficult to compute a median or average value (Figure 15, see Figure 2). 
+			</p>
+
+			<figure>
+				<img src="images\Boston Map Price Post Conversion.png" alt=""
+				width= "100%">>
+				<figcaption>
+				Figure 15 - Boston: Map of incomplete data of building value post condo conversion. 
 				</figcaption>
 			</figure>
 
 			<figure>
-				<img src="Vis%20&amp;%20Society%20Assignment%202_files/IMAGE_FILENAME.htm" alt="">
+				<img src="images\Boston Number of Units Histogram.png" alt=""
+				width= "100%">>
 				<figcaption>
-				ENTER IMAGE CAPTION HERE.
+				Figure 16 - Histogram showing distribution of number of units for condo conversions in Boston. 
 				</figcaption>
 			</figure>
 
 			<figure>
-				<img src="Vis%20&amp;%20Society%20Assignment%202_files/IMAGE_FILENAME.htm" alt="">
+				<img src="images\Cambridge Number of Units Histogram.png" alt=""
+				width= "100%">>
 				<figcaption>
-				ENTER IMAGE CAPTION HERE.
+				Figure 17 - Histogram showing distribution of number of units for condo conversions in Cambridge. 
+				</figcaption>
+			</figure>
+
+			<p> Condo conversions in both Cambridge and Boston skew toward a lower number of units, however Boston has more conversions with a larger number
+				of units. For both datasets, there are a few fields with very large values (ie. 56 in Cambridge, and 200+ in Boston). However, these values 
+				seem plausible, therefore I think they should be kept (Fig 16 and 17).
+			</p>
+			<figure>
+				<img src="images\Boston Parcel Area vs. Land Value.png" alt=""
+				width= "100%">>
+				<figcaption>
+				Figure 18 - Visualization showing correlation between parcel area and parcel value prior to conversion. 
 				</figcaption>
 			</figure>
 
 			<figure>
-				<img src="Vis%20&amp;%20Society%20Assignment%202_files/IMAGE_FILENAME.htm" alt="">
+				<img src="images\Boston Parcel Area vs. Land Value with Number of Condo Units.png" alt=""
+				width= "100%">>
 				<figcaption>
-				ENTER IMAGE CAPTION HERE.
+				Figure 19 - Scatterplot showing correlation between parcel area, value and number of condos in Boston.  
 				</figcaption>
 			</figure>
+
+			<p> To wrap up my exploration of value, I did a last analysis on the correlation between the assessed value of the parcel and the area of the parcel. 
+				Both visualizations show a correlation between the area and value of the parcel, which is unsurprising, and figure 19 indicates that larger parcels are more likely 
+				to be converted into more condos - however a large parcel does not necessarily mean more condos. For the scatterplot, I initially cropped out any outliers, but eventually
+				decided on a logarithmic scale axis for both parcel area and parcel value to improve the visualization. 
+			<figure>
+				<img src="images\Boston Condition Prior.png" alt=""
+				width= "100%">>
+				<figcaption>
+				Figure 20 - Boston - Building condition prior to condo conversion.
+				</figcaption>
+			</figure>
+
+			<figure>
+				<img src="images\Boston Condition Post.png" alt=""
+				width= "100%">>
+				<figcaption>
+				Figure 21 - Boston - Building condition post condo conversion.
+				</figcaption>
+			</figure>
+	
+			<p> Finally, I was curious to explore how the conversion into condos changed the condition of the property, as I addressed in my last question. 
+				Although I'm not sure how these condition assessments are performed, and if there is unique data for the "prior" and "post" field, my assumption
+				was that there would be a substantial improvement in building condition - however I was proven wrong, as there was only a barely perceptible overal improvement, 
+				with more null values (grey) for the condition post conversion, casting doubt on the usefulness of this data (Fig 20 and 21). 
+			</p>
+
 		</section>
 
 		<section>
 			<h2>Summary</h2>
 
-			<p>WRITE FINAL SUMMARY HERE.</p>
+			<p>This data exploration was really rewarding and informative, however also left me with more questions than answers, particularly for some of the fields with sparse
+				data. Most of these questions are about the assessed value of the land or building post conversion, or the sale price of the individual condos - I felt like I was unable 
+				to fully address my third question, which was partially concerned with the change in value as apartments are converted into condominiums. The most interesting 
+				results were the spatialized results, as it was easy to begin to notice patterns that correlate to my understanding of Boston, having lived in the city for four years. I 
+				also found that the given data was helpful to answer my second question, which was about the physical attributes of the building stock that is being converted. Im curious
+				to investigate the different time spans involved in condo conversion more, especially the duration for which these properties are held before being converted, which 
+				was something that was difficult to determine given the gaps in this data. 
+			</p>
+			<p>My biggest takeaway was probably about the usefulness of the visualization of the data completeness (Figure 2 and 3). Initially, I found it very hard to navigate the data, 
+				and after I made those two figures I continuously returned back to them to determine what data was "high quality" and what results were more questionable. I think this ties 
+				in well with the "exploratory" phase of data analysis that has been covered in class - something I don't usually do when working with a given dataset.
+			</p>
 		</section>
 	</main>
 
