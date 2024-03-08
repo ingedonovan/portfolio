@@ -22,9 +22,6 @@ body {
     text-align: center;
   }
 
-   li {
-    display: inline;
-  }
 
   a:hover {
     background-color: rgb(190, 126, 172);
